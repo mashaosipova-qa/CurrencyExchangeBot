@@ -1,5 +1,5 @@
 # CurrencyExchangeBot
-Telegram‑бот для конвертации валют на Python. Использует публичный API для получения актуальных курсов https://api.exchangerate-api.com/v4/latest/<BASE> (вместо <BASE> подставляется базовая валюта).
+Telegram‑бот для конвертации валют на Python. Использует публичный API для получения актуальных курсов https://api.exchangerate-api.com/v4/latest/{BASE} (вместо {BASE} подставляется базовая валюта).
 Команды, который выполняет Telegram-бот:
 - '/start' или '/helpMe' — показывает инструкцию по использованию,
 - '/values' — выводит список доступных валют,
