@@ -1,4 +1,4 @@
-TOKEN = "8558354634:AAGSQtc4fOYBS3PSEnsjMB5iB8fTRE0ZZN8"
+TOKEN = ""
 keys = {
     'доллар': 'USD',
     'евро': 'EUR',
@@ -6,5 +6,6 @@ keys = {
     'юань': 'CNY',
     'фунт': 'GBP',
     'йена': 'JPY'
+
 
 }
