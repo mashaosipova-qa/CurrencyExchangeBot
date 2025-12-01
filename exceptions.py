@@ -13,12 +13,13 @@ class CryptoConverter:
         # quote - валюта, в которую конвертируем
         # amount - количество
 
-        if quote.lower() == base.lower():
-            raise APIException(f'Введите различные валюты')
+
         if quote.lower() not in keys:
             raise APIException(f'Валюта "{quote}" не найдена. Посмотрите список: /values')
         if base.lower() not in keys:
             raise APIException(f'Валюта "{base}" не найдена. Посмотрите список: /values')
+        if quote.lower() == base.lower():
+            raise APIException(f'Введите различные валюты')
 
         try:
             base_ticker = keys[base.lower()]
@@ -32,6 +33,8 @@ class CryptoConverter:
             amount = float(amount)
         except ValueError:
             raise APIException(f'Не удалось обработать количество {amount}')
+        if amount <= 0:
+            raise APIException(f'Количество должно быть больше нуля')
 
         try:
             response = requests.get(f'https://api.exchangerate-api.com/v4/latest/{base_ticker}')
